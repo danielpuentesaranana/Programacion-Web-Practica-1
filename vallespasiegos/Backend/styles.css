@@ -1,0 +1,82 @@
+body {
+  background: url('valles-pasiegos-1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+.container {
+  background: rgba(255,255,255,0.97);
+  border-radius: 10px;
+  width: 90%;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 25px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+h1 {
+  text-align: center;
+  color: #204d22;
+}
+h2 {
+  margin-top: 27px;
+  color: #306729;
+}
+input, select, button {
+  font-size: 16px;
+  margin: 3px 0;
+  padding: 6px 8px;
+  border-radius: 5px;
+  border: 1px solid #b2b2b2;
+}
+#busqueda {
+  width: 100%;
+  margin-bottom: 10px;
+}
+table {
+  width: 100%;
+  margin: 12px 0;
+  border-collapse: collapse;
+  background: #ffffffee;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: 9px;
+  text-align: center;
+}
+tr:nth-child(even) {
+  background: #f3fef1;
+}
+button {
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#logout-btn {
+  background: #956a09;
+  color: white;
+}
+form {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+.msg-error {
+  color: #c20000;
+}
+#formulario-chat {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+#mensajes {
+  min-height: 100px;
+  max-height: 180px;
+  overflow-y: auto;
+  background: #f7faec;
+  padding: 7px;
+  margin-top: 8px;
+  border: 1px solid #b9b9b9;
+  border-radius: 6px;
+  list-style: none;
+}
