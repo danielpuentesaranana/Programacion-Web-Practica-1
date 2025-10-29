@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Productos Valles Pasiegos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Portal Productos Valles Pasiegos</h1>
+    <div id="auth-section">
+      <div id="login-form">
+        <h2>Iniciar sesión</h2>
+        <input type="text" id="login-username" placeholder="Usuario" required>
+        <input type="password" id="login-password" placeholder="Contraseña" required>
+        <button id="login-btn">Entrar</button>
+        <span id="login-error" class="msg-error"></span>
+      </div>
+      <div id="register-form" style="margin-top:15px;">
+        <h2>Registro</h2>
+        <input type="text" id="register-username" placeholder="Usuario" required>
+        <input type="password" id="register-password" placeholder="Contraseña" required>
+        <select id="register-role">
+          <option value="usuario">Usuario</option>
+          <option value="admin">Admin</option>
+        </select>
+        <button id="register-btn">Registrar</button>
+        <span id="register-error" class="msg-error"></span>
+      </div>
+    </div>
+    <div id="main-section" style="display:none;">
+      <h2>Lista de productos</h2>
+      <input type="text" id="busqueda" placeholder="Buscar producto...">
+      <table id="tabla-productos">
+        <thead>
+          <tr><th>Nombre</th><th>Precio</th><th>Descripción</th><th>Acciones</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <form id="form-producto" style="display:none;">
+        <input type="text" id="nombre" placeholder="Nombre" required>
+        <input type="number" id="precio" placeholder="Precio" required>
+        <input type="text" id="descripcion" placeholder="Descripción" required>
+        <button type="submit">Guardar</button>
+      </form>
+      <button id="logout-btn" style="margin-top:20px;">Cerrar sesión</button>
+      <h2>Chat</h2>
+      <ul id="mensajes"></ul>
+      <form id="formulario-chat">
+        <input id="input-mensaje" autocomplete="off" placeholder="Escribe tu mensaje..." required />
+        <button>Enviar</button>
+      </form>
+    </div>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
